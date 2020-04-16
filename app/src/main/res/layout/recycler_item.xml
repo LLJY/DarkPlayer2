@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp">
+    <es.claucookie.miniequalizerlibrary.EqualizerView
+        android:id="@+id/equalizer"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        custom:foregroundColor="@color/colorAccent"
+        custom:animDuration="9000"/>
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/music_icon"
+        android:id="@+id/AlbumArt"
+        android:scaleType="fitXY"
+        android:layout_width="56dp"
+        android:layout_height="56dp"/>
+    <TextView
+        android:id="@+id/SongTitle"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/AlbumArt"
+        app:layout_constraintTop_toTopOf="@id/AlbumArt"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/ArtistName"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist"
+        app:layout_constraintTop_toBottomOf="@id/SongTitle"
+        app:layout_constraintStart_toStartOf="@id/SongTitle"
+        android:textSize="12sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
